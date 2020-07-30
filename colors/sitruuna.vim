@@ -214,6 +214,11 @@ hi link pythonBuiltin Constant
 hi link jsxComponentName Statement
 hi link jsxTagName       Special
 
+" Rust
+hi link rsIdentDef Delimiter
+hi link rsUserIdent Delimiter
+hi link rsUserIdent Delimiter
+
 " Neomake
 hi link NeomakeErrorSign ErrorMsg
 hi link NeomakeWarningSign WarningMsg
