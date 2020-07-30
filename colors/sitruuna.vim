@@ -10,25 +10,28 @@ set background=dark
 let g:colors_name="sitruuna"
 " }}}
 " Colors {{{
-let s:col            = {}
-let s:col.lemon      = ['#FAC03B', 220]
-let s:col.special    = ['#ffb354', 215]
-let s:col.preproc    = ['#a29bfe', 147]
-let s:col.function   = ['#a3db81', 117]
-let s:col.foreground = ['#d1d1d1', 188]
-let s:col.fg_alt     = ['#a1a1a1', 145]
-let s:col.statusline = ['#34373a', 137]
-let s:col.darker     = ['#131515', 232]
-let s:col.background = ['#181a1b', 233]
-let s:col.light_bg   = ['#1d2023', 236]
-let s:col.lighter_bg = ['#242629', 238]
-let s:col.comment    = ['#5c6366', 244]
-let s:col.selection  = ['#2D3032', 238]
-let s:col.string     = ['#37ad82', 72]
-let s:col.type       = ['#7398dd', 104]
-let s:col.constant   = ['#ca70d6', 170]
-let s:col.error      = ['#c15959', 131]
-let s:col.none       = ['NONE', 'NONE']
+let s:col              = {}
+let s:col.lemon        = ['#FAC03B', 220]
+let s:col.bright_lemon = ['#fcd988', 220]
+let s:col.special      = ['#ffb354', 215]
+let s:col.preproc      = ['#a29bfe', 147]
+let s:col.function     = ['#a3db81', 117]
+let s:col.foreground   = ['#d1d1d1', 188]
+let s:col.fg_alt       = ['#a1a1a1', 145]
+let s:col.fg_alt_2     = ['#bbbbbb', 145]
+let s:col.statusline   = ['#34373a', 137]
+let s:col.darker       = ['#131515', 232]
+let s:col.background   = ['#181a1b', 233]
+let s:col.light_bg     = ['#1d2023', 236]
+let s:col.lighter_bg   = ['#242629', 238]
+let s:col.comment      = ['#5c6366', 244]
+let s:col.selection    = ['#2D3032', 238]
+let s:col.string       = ['#3bfac0', 72]
+let s:col.type         = ['#EEEEEE', 104]
+let s:col.constant     = ['#EEEEEE', 170]
+let s:col.white        = ['#FFFFFF', 170]
+let s:col.error        = ['#c15959', 131]
+let s:col.none         = ['NONE', 'NONE']
 " }}}
 " Highlighting Function from https://github.com/sjl/badwolf {{{
 function! s:HL(group, fg, ...)
@@ -210,14 +213,19 @@ hi link fugitiveHash Constant
 " Python
 hi link pythonBuiltin Constant
 
+" Rust
+hi link rsIdentDef Delimiter
+hi link rsOperator Delimiter
+hi link rsFieldAccess Delimiter
+
+call s:HL('rsUserType', 'fg_alt_2', 'none')
+call s:HL('rsUserIdent', 'fg_alt', 'none')
+call s:HL('rsTypeDef', 'white', 'none')
+call s:HL('rsFuncDef', 'white', 'none')
+
 " 'MaxMEllon/vim-jsx-pretty'
 hi link jsxComponentName Statement
 hi link jsxTagName       Special
-
-" Rust
-hi link rsIdentDef Delimiter
-hi link rsUserIdent Delimiter
-hi link rsUserIdent Delimiter
 
 " Neomake
 hi link NeomakeErrorSign ErrorMsg
