@@ -218,6 +218,9 @@ hi link rsIdentDef Delimiter
 hi link rsOperator Delimiter
 hi link rsFieldAccess Delimiter
 
+" Js
+hi link jsVariableType Statement
+
 call s:HL('rsUserType', 'fg_alt_2', 'none')
 call s:HL('rsUserIdent', 'fg_alt', 'none')
 call s:HL('rsTypeDef', 'white', 'none')
