@@ -240,6 +240,7 @@ hi link NeomakeVirtualtextError ErrorMsg
 hi link NeomakeVirtualtextWarning WarningMsg
 hi link NeomakeVirtualtextMessage WarningMsg
 hi link NeomakeVirtualtextInfo Type
+hi link CocErrorSign ErrorMsg
 
 " Fzf
 if get(g:, 'sitruuna_fzf', 1) == 1
