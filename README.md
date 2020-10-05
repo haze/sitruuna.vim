@@ -10,7 +10,7 @@ A fresh lemon inspired colorscheme for neovim
 
 Add the following plugin to your `init.vim`:
 ```vim
-Plug 'eemed/sitruuna.vim'
+Plug 'haze/sitruuna.vim'
 ```
 
 and execute `PlugInstall`.
