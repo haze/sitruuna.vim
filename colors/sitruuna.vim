@@ -13,10 +13,10 @@ let g:colors_name="sitruuna"
 let s:col              = {}
 let s:col.lemon        = ['#FAC03B', 220]
 let s:col.bright_lemon = ['#fcd988', 220]
-let s:col.special      = ['#ffb354', 215]
+let s:col.special      = ['#f1d47a', 215]
 let s:col.preproc      = ['#a29bfe', 147]
 let s:col.function     = ['#a3db81', 117]
-let s:col.foreground   = ['#d1d1d1', 188]
+let s:col.foreground   = ['#c8c8c8', 188]
 let s:col.fg_alt       = ['#a1a1a1', 145]
 let s:col.fg_alt_2     = ['#bbbbbb', 145]
 let s:col.statusline   = ['#34373a', 137]
@@ -26,7 +26,7 @@ let s:col.light_bg     = ['#1d2023', 236]
 let s:col.lighter_bg   = ['#242629', 238]
 let s:col.comment      = ['#5c6366', 244]
 let s:col.selection    = ['#2D3032', 238]
-let s:col.string       = ['#3bfac0', 72]
+let s:col.string       = ['#a1e0ea', 72]
 let s:col.type         = ['#EEEEEE', 104]
 let s:col.constant     = ['#EEEEEE', 170]
 let s:col.white        = ['#FFFFFF', 170]
@@ -87,7 +87,7 @@ call s:HL('Error',           'error',      'none',       'none')
 call s:HL('Identifier',      'function',       'none')
 call s:HL('Ignore',          'comment',    'none')
 call s:HL('PreProc',         'preproc',    'none')
-call s:HL('Special',         'special',    'none')
+call s:HL('Special',         'special',    'none', 'bold')
 call s:HL('Statement',       'lemon',      'none',       'bold')
 call s:HL('String',          'string',     'none')
 call s:HL('Todo',            'function', 'none')
@@ -132,6 +132,8 @@ call s:HL('htmlTagName',     'lemon',      'none',       'bold')
 call s:HL('htmlTag',         'foreground', 'none')
 call s:HL('htmlArg',         'function',   'none')
 
+call s:HL('SpecialComment', 'bright_lemon', 'none', 'bold')
+
 
 call s:HL('IncSearch',  'special', 'none', 'reverse,bold')
 call s:HL('Search',     'special', 'none', 'reverse,bold')
@@ -161,7 +163,6 @@ hi link Number                   Constant
 hi link PreCondit                PreProc
 hi link Repeat                   Statement
 hi link SpecialChar              Special
-hi link SpecialComment           Special
 hi link StorageClass             Statement
 hi link Structure                Statement
 hi link Tag                      Special
