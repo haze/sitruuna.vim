@@ -24,13 +24,14 @@ let s:col.darker       = ['#131515', 232]
 let s:col.background   = ['#181a1b', 233]
 let s:col.light_bg     = ['#1d2023', 236]
 let s:col.lighter_bg   = ['#242629', 238]
-let s:col.comment      = ['#5c6366', 244]
+let s:col.comment      = ['#9da1a3', 244]
 let s:col.selection    = ['#2D3032', 238]
 let s:col.string       = ['#a1e0ea', 72]
 let s:col.type         = ['#EEEEEE', 104]
 let s:col.constant     = ['#EEEEEE', 170]
 let s:col.white        = ['#FFFFFF', 170]
 let s:col.error        = ['#c15959', 131]
+let s:col.doc_comment  = ['#52595b', 'NONE']
 let s:col.none         = ['NONE', 'NONE']
 " }}}
 " Highlighting Function from https://github.com/sjl/badwolf {{{
@@ -132,7 +133,7 @@ call s:HL('htmlTagName',     'lemon',      'none',       'bold')
 call s:HL('htmlTag',         'foreground', 'none')
 call s:HL('htmlArg',         'function',   'none')
 
-call s:HL('SpecialComment', 'bright_lemon', 'none', 'bold')
+call s:HL('SpecialComment', 'doc_comment', 'none')
 
 
 call s:HL('IncSearch',  'special', 'background', 'reverse,bold')
